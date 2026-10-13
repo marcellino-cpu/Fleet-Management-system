@@ -3,7 +3,7 @@
 class Motorcycle : public Vehicle
 {
 private :
-    string Type;
+    std::string Type;
     bool hasABS;
     int seatHeight;
 
@@ -14,16 +14,15 @@ public:
     Battery *battery;
 
 public:
-    Motorcycle(string Brand, string Model, int Year, long long Mileage, double Price, string Transimission, int MaxSpeed,
-               string Type, bool hasABS, int seatHeight); // constructor
+    Motorcycle(std::string Brand, std::string Model, int Year, long long Mileage, double Price,
+               std::string Transimission, int MaxSpeed,
+               std::string Type, bool hasABS, int seatHeight); // constructor
 
-    string GetType();
+    std::string GetType();
 
     bool GetHasAbs();
 
     int GetseatHieght();
 
     void ViewDetails() override;
-
-
 };

@@ -1,21 +1,21 @@
 #pragma once
 #include <iostream>
 #include <string>
-using namespace std;
+
 
 class Battery
 {
 private :
     int Voltage;
     int Capacity;
-    string Type;
+   std:: string Type;
 
 public :
-    Battery(int Voltage, int Capacity, string Type);
+    Battery(int Voltage, int Capacity,std:: string Type);
     void SetCapcity(int Capacity);
     int GetVoltage();
     int GetCapacity();
-    string GetType();
+    std::string GetType();
 
     void ViewDetails();
 };

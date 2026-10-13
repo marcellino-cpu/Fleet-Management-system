@@ -6,7 +6,7 @@ private:
     int NumberOfSeats;
     int NumberOfDoors;
     int TrunkCapacity;
-    string BodyType;
+    std::string BodyType;
 
 public:
     //Association (Composition) due to the strong relation between Car and engine and also Car and Battery
@@ -15,8 +15,8 @@ public:
     Battery *battery;
 
 public :
-    Car(string Brand, string Model, int year, long long Mileage, double price, string Transimission, int MaxSpeed,
-        int NumberOfSeats, int NumberOfDoors, int TrunkCapacity, string BodyType);   // constructor
+    Car(std::string Brand, std::string Model, int year, long long Mileage, double price, std::string Transimission, int MaxSpeed,
+        int NumberOfSeats, int NumberOfDoors, int TrunkCapacity, std::string BodyType);   // constructor
 
     int GetNumberOfSeats();
 
@@ -24,7 +24,7 @@ public :
 
     int GetTrunkCapacity();
 
-    string GetBodyType();
+    std::string GetBodyType();
 
     void ViewDetails() override;
 

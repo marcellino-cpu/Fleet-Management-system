@@ -4,7 +4,7 @@
 
 #include "Engine.h"
 
-Engine::Engine(double Capacity, int HoursePower, int Clyinders, string Fuel_Type, string EngineType)
+Engine::Engine(double Capacity, int HoursePower, int Clyinders, std::string Fuel_Type, std::string EngineType)
 {
     this->Capacity = Capacity;
     this->HoursePower = HoursePower;
@@ -28,21 +28,21 @@ int Engine::GetCylinders()
     return cylinders;
 }
 
-string Engine::Get_Fuel_Type()
+std::string Engine::Get_Fuel_Type()
 {
     return Fuel_Type;
 }
 
-string Engine::Get_Engine_Type()
+std::string Engine::Get_Engine_Type()
 {
     return EngineType;
 }
 
 void Engine::ViewDetails()
 {
-    cout << "Capacity : " << Capacity << '\n';
-    cout << "Hourse Power : " << HoursePower << '\n';
-    cout << "Number Of Cylinders  : " << cylinders    << '\n';
-    cout << "Fuel Type : " << Fuel_Type << '\n';
-    cout << "Engine Type : " << EngineType << '\n';
+    std::cout << "Capacity : " << Capacity << '\n';
+    std::cout << "Hourse Power : " << HoursePower << '\n';
+    std::cout << "Number Of Cylinders  : " << cylinders << '\n';
+    std::cout << "Fuel Type : " << Fuel_Type << '\n';
+    std::cout << "Engine Type : " << EngineType << '\n';
 }

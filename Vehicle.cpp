@@ -4,8 +4,8 @@
 
 #include "Vehicle.h"
 
-Vehicle::Vehicle(string Brand, string Model, int Year, long long Mileage, double Price,
-                 string Transimission, int MaxSpeed)
+Vehicle::Vehicle(std::string Brand, std::string Model, int Year, long long Mileage, double Price,
+                std:: string Transimission, int MaxSpeed)
 {
     this->Brand = Brand;
     this->Model = Model;
@@ -17,7 +17,7 @@ Vehicle::Vehicle(string Brand, string Model, int Year, long long Mileage, double
     id = Id_Generator++;
 }
 
-void Vehicle::SetTransimission(string Transimission)
+void Vehicle::SetTransimission(std::string Transimission)
 {
     bool isAlpha = true;
     for (int i = 0; i < Transimission.size(); i++)
@@ -29,19 +29,19 @@ void Vehicle::SetTransimission(string Transimission)
     }
     if (!isAlpha)
     {
-        cout << "Invalid input ! Please Enter an input without Digits " << '\n';
+        std::cout << "Invalid input ! Please Enter an input without Digits " << '\n';
     } else
     {
         this->Transimission = Transimission;
     }
 }
 
-string Vehicle::GetBrand()
+std::string Vehicle::GetBrand()
 {
     return Brand;
 }
 
-string Vehicle::GetModel()
+std::string Vehicle::GetModel()
 {
     return Model;
 }
@@ -72,7 +72,7 @@ int Vehicle::GetMaxSpeed()
 }
 
 
-string Vehicle::GetTransimission()
+std::string Vehicle::GetTransimission()
 {
     return Transimission;
 }

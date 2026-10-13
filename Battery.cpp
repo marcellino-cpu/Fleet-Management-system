@@ -4,7 +4,7 @@
 
 #include "Battery.h"
 
-Battery::Battery(int Voltage, int Capacity, string Type) : Voltage(Voltage), Capacity(Capacity), Type(Type)
+Battery::Battery(int Voltage, int Capacity, std::string Type) : Voltage(Voltage), Capacity(Capacity), Type(Type)
 {
 }
 
@@ -13,7 +13,7 @@ void Battery::SetCapcity(int Capacity)
 {
     if (Capacity < 0)
     {
-        cout << "INVALID VALUE ! " << '\n';
+        std::cout << "INVALID VALUE ! " << '\n';
     } else
     {
         this->Capacity = Capacity;
@@ -30,17 +30,15 @@ int Battery::GetCapacity()
     return Capacity;
 }
 
-string Battery::GetType()
+std::string Battery::GetType()
 {
     return Type;
 }
 
 void Battery::ViewDetails()
 {
-    cout << "Battery information : " << '\n';
-    cout << "Capacity : " << Capacity <<" Ah" <<  '\n';
-    cout << "Voltage : " << Voltage << " V " << '\n';
-    cout << "Type : " << Type << '\n';
+    std::cout << "Battery information : " << '\n';
+    std::cout << "Capacity : " << Capacity << " Ah" << '\n';
+    std::cout << "Voltage : " << Voltage << " V " << '\n';
+    std::cout << "Type : " << Type << '\n';
 }
-
-

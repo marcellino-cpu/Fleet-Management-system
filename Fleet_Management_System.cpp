@@ -8,57 +8,57 @@
 #include "Fleet_Management_System.h"
 
 
-void Fleet_Management_System::Adding_Car(string brand, string model, int year, int Mileage, double Price,
-                                         string Transimision, int MaxSpeed
+void Fleet_Management_System::Adding_Car(std::string brand, std::string model, int year, int Mileage, double Price,
+                                         std::string Transimision, int MaxSpeed
 )
 {
-    cout << "Enter Number of Seats : " << '\n';
+    std::cout << "Enter Number of Seats : " << '\n';
     int NumberOFseats;
-    cin >> NumberOFseats;
-    cout << "Enter Number of Doors : " << '\n';
+    std::cin >> NumberOFseats;
+    std::cout << "Enter Number of Doors : " << '\n';
     int NumberOFDoors;
-    cin >> NumberOFDoors;
-    cout << "Enter Trunk Capacity : " << '\n';
+    std::cin >> NumberOFDoors;
+    std::cout << "Enter Trunk Capacity : " << '\n';
     int TrunkCapacity;
-    cin >> TrunkCapacity;
-    cout << "Enter Car's Type : " << '\n';
-    string type;
-    cin >> type;
+    std::cin >> TrunkCapacity;
+    std::cout << "Enter Car's Type : " << '\n';
+    std::string type;
+    std::cin >> type;
     Car *car = new Car(brand, model, year, Mileage, Price, Transimision, MaxSpeed, NumberOFseats, NumberOFDoors,
                        TrunkCapacity, type);
 
     cars.push_back(car); // adding created car to the vector of cars
 
-    cout << "Enter Engine info : " << '\n';
-    cout << "Enter Capacity : " << '\n';
+    std::cout << "Enter Engine info : " << '\n';
+    std::cout << "Enter Capacity : " << '\n';
     double capacity;
-    cin >> capacity;
-    cout << "Enter Hourse Power : " << '\n';
+    std::cin >> capacity;
+    std::cout << "Enter Hourse Power : " << '\n';
 
     int HoursePower;
-    cin >> HoursePower;
-    cout << "Enter Clyinders  : " << '\n';
+    std::cin >> HoursePower;
+    std::cout << "Enter Clyinders  : " << '\n';
 
     int Clyinders;
-    cin >> Clyinders;
-    cout << "Enter Fuel_Type : " << '\n';
+    std::cin >> Clyinders;
+    std::cout << "Enter Fuel_Type : " << '\n';
 
-    string Fuel_Type;
-    cin >> Fuel_Type;
-    cout << "Enter Engine Type  : " << '\n';
+    std::string Fuel_Type;
+    std::cin >> Fuel_Type;
+    std::cout << "Enter Engine Type  : " << '\n';
 
-    string EngineType;
-    cin >> EngineType;
+    std::string EngineType;
+    std::cin >> EngineType;
     Engine *engine = new Engine(capacity, HoursePower, Clyinders, Fuel_Type, EngineType);
-    cout << "Enter Battery's voltage : " << '\n';
+    std::cout << "Enter Battery's voltage : " << '\n';
     int Voltage;
-    cin >> Voltage;
-    cout << "Enter Battery's Capacity : " << '\n';
+    std::cin >> Voltage;
+    std::cout << "Enter Battery's Capacity : " << '\n';
     int Capacity;
-    cin >> Capacity;
-    cout << "Enter Battery's Type : " << '\n';
-    string BatteryType;
-    cin >> BatteryType;
+    std::cin >> Capacity;
+    std::cout << "Enter Battery's Type : " << '\n';
+    std::string BatteryType;
+    std::cin >> BatteryType;
     Battery *battery = new Battery(Voltage, Capacity, BatteryType);
     //composition (Strong Relation)
     car->engine = engine;
@@ -67,53 +67,54 @@ void Fleet_Management_System::Adding_Car(string brand, string model, int year, i
     car->battery = battery;
 }
 
-void Fleet_Management_System::Adding_Motorcycle(string brand, string model, int year, int Mileage, double Price,
-                                                string Transimision, int MaxSpeed)
+void Fleet_Management_System::Adding_Motorcycle(std::string brand, std::string model, int year, int Mileage,
+                                                double Price,
+                                                std::string Transimision, int MaxSpeed)
 {
-    cout << "Enter Moto Type : " << '\n';
-    string MotoType;
-    cin >> MotoType;
-    cout << "Has ABS? (1->YES | 0->NO)" << '\n';
+    std::cout << "Enter Moto Type : " << '\n';
+    std::string MotoType;
+    std::cin >> MotoType;
+    std::cout << "Has ABS? (1->YES | 0->NO)" << '\n';
     bool choice;
-    cin >> choice;
-    cout << "Enter Seat Height : " << '\n';
+    std::cin >> choice;
+    std::cout << "Enter Seat Height : " << '\n';
     int Height;
-    cin >> Height;
+    std::cin >> Height;
     Motorcycle *motorcycle = new Motorcycle(brand, model, year, Mileage, Price, Transimision, MaxSpeed, MotoType,
                                             choice, Height);
 
     motorcycles.push_back(motorcycle); // adding created motorcycle to motorcycle vector
 
-    cout << "Enter Engine info : " << '\n';
-    cout << "Enter Capacity : " << '\n';
+    std::cout << "Enter Engine info : " << '\n';
+    std::cout << "Enter Capacity : " << '\n';
     double capacity;
-    cin >> capacity;
-    cout << "Enter Hourse Power : " << '\n';
+    std::cin >> capacity;
+    std::cout << "Enter Hourse Power : " << '\n';
     int HoursePower;
-    cin >> HoursePower;
-    cout << "Enter Clyinders number : " << '\n';
+    std::cin >> HoursePower;
+    std::cout << "Enter Clyinders number : " << '\n';
 
     int Clyinders;
-    cin >> Clyinders;
-    cout << "Enter Fuel_Type  : " << '\n';
+    std::cin >> Clyinders;
+    std::cout << "Enter Fuel_Type  : " << '\n';
 
-    string Fuel_Type;
-    cin >> Fuel_Type;
-    cout << "Enter Engine Type  : " << '\n';
+    std::string Fuel_Type;
+    std::cin >> Fuel_Type;
+    std::cout << "Enter Engine Type  : " << '\n';
 
-    string EngineType;
-    cin >> EngineType;
+    std::string EngineType;
+    std::cin >> EngineType;
     Engine *engine = new Engine(capacity, HoursePower, Clyinders, Fuel_Type, EngineType);
-    cout << "Enter Battery info : " << '\n';
-    cout << "Enter Battery's voltage : " << '\n';
+    std::cout << "Enter Battery info : " << '\n';
+    std::cout << "Enter Battery's voltage : " << '\n';
     int Voltage;
-    cin >> Voltage;
-    cout << "Enter Battery's Capacity : " << '\n';
+    std::cin >> Voltage;
+    std::cout << "Enter Battery's Capacity : " << '\n';
     int Capacity;
-    cin >> Capacity;
-    cout << "Enter Battery's Type : " << '\n';
-    string BatteryType;
-    cin >> BatteryType;
+    std::cin >> Capacity;
+    std::cout << "Enter Battery's Type : " << '\n';
+    std::string BatteryType;
+    std::cin >> BatteryType;
     Battery *battery = new Battery(Voltage, Capacity, BatteryType);
 
     motorcycle->engine = engine;
@@ -123,11 +124,11 @@ void Fleet_Management_System::Adding_Motorcycle(string brand, string model, int 
 
 template<class T>
 
-void DisplayVehicles(const vector<T *> &vehicle__vector, string title)
+void DisplayVehicles(const std::vector<T *> &vehicle__vector, std::string title)
 {
     for (int i = 0; i < vehicle__vector.size(); i++)
     {
-        cout << title << " #" << i + 1 << '\n';
+        std::cout << title << " #" << i + 1 << '\n';
         Vehicle *vehicle = vehicle__vector[i];
         vehicle->ViewDetails();
         //Run time polymorphism dealing with child (cars , motorcycles)  through the parent (vehicle)  --> called (Upcasting)
@@ -150,10 +151,10 @@ void Fleet_Management_System::Display_Fleet()
 {
     DisplayVehicles(cars, "Cars");
 
-    cout << "**************************************" << '\n';
-    cout << "**************************************" << '\n';
-    cout << "**************************************" << '\n';
-    cout << "**************************************" << '\n';
+    std::cout << "**************************************" << '\n';
+    std::cout << "**************************************" << '\n';
+    std::cout << "**************************************" << '\n';
+    std::cout << "**************************************" << '\n';
     DisplayVehicles(motorcycles, "Motorcycles");
 
 
@@ -193,7 +194,7 @@ void Fleet_Management_System::Display_Fleet()
 
 
 template<class S>
-void Unique_Brands(set<string> unique_brands, vector<S *> vehicles)
+void Unique_Brands(std::set<std::string> unique_brands, std::vector<S *> vehicles)
 {
     for (int i = 0; i < vehicles.size(); i++)
     {
@@ -201,29 +202,29 @@ void Unique_Brands(set<string> unique_brands, vector<S *> vehicles)
     }
     for (const auto &item: unique_brands) // set has no indcies
     {
-        cout << item << '\n';
+        std::cout << item << '\n';
     }
 }
 
 
 void Fleet_Management_System::Brands_that_exist_in_your_fleet()
 {
-    set<string> brands_cars;
-    set<string> brands_motorcycle;
+    std::set<std::string> brands_cars;
+    std::set<std::string> brands_motorcycle;
 
 
-    cout << "Brand Cars that exist in your fleet : " << '\n';
+    std::cout << "Brand Cars that exist in your fleet : " << '\n';
     Unique_Brands(brands_cars, cars);
 
 
-    cout << "Brand Motorcycle that exist in your fleet : " << '\n';
+    std::cout << "Brand Motorcycle that exist in your fleet : " << '\n';
     Unique_Brands(brands_motorcycle, motorcycles);
 }
 
 
 template<class M>
 
-void count_Brands(unordered_map<string, int> count_per_brand_cars, vector<M *> vehicle)
+void count_Brands(std::unordered_map<std::string, int> count_per_brand_cars, std::vector<M *> vehicle)
 {
     for (int i = 0; i < vehicle.size(); i++)
     {
@@ -232,73 +233,73 @@ void count_Brands(unordered_map<string, int> count_per_brand_cars, vector<M *> v
     }
     for (const auto [Brand , count]: count_per_brand_cars)
     {
-        cout << Brand << " : " << count << '\n';
+        std::cout << Brand << " : " << count << '\n';
     }
 }
 
 void Fleet_Management_System::Display_count_per_brand()
 {
-    unordered_map<string, int> count_per_brand;
-    cout << "For Cars : " << '\n';
+   std:: unordered_map<std::string, int> count_per_brand;
+    std::cout << "For Cars : " << '\n';
     count_Brands(count_per_brand, cars);
 
 
-    cout << "===============================" << '\n';
-    cout << "For Motorcycle : " << '\n';
-    unordered_map<string, int> count_per_brand_moto;
+    std::cout << "===============================" << '\n';
+    std::cout << "For Motorcycle : " << '\n';
+    std::unordered_map<std::string, int> count_per_brand_moto;
     count_Brands(count_per_brand_moto, motorcycles);
 }
 
 void Fleet_Management_System::Adding_Vehicle(int choice)
 {
-    cout << "Enter Brand : " << '\n';
-    string brand;
-    cin >> brand;
+    std::cout << "Enter Brand : " << '\n';
+    std::string brand;
+    std::cin >> brand;
 
-    cout << "Enter Model : " << '\n';
-    string model;
-    cin >> model;
-    cout << "Enter Vehicle's Production Year : " << '\n';
+    std::cout << "Enter Model : " << '\n';
+   std:: string model;
+   std:: cin >> model;
+    std::cout << "Enter Vehicle's Production Year : " << '\n';
     int year;
-    cin >> year;
+    std::cin >> year;
 
 
     while (year > 2026 || year <= 2000)
     {
-        cout << "Invalid year ! Please enter a valid year from 2000 to 2026 " << '\n';
-        cin >> year;
+       std:: cout << "Invalid year ! Please enter a valid year from 2000 to 2026 " << '\n';
+       std:: cin >> year;
     }
 
-    cout << "Enter Mileage : " << '\n';
+    std::cout << "Enter Mileage : " << '\n';
     int Mileage;
-    cin >> Mileage;
+    std::cin >> Mileage;
 
     while (Mileage < 0 || Mileage > 500000)
     {
-        cout << "Invalid Mileage ! Please enter a valid Mileage from 0 to 500000 " << '\n';
-        cin >> Mileage;
+        std::cout << "Invalid Mileage ! Please enter a valid Mileage from 0 to 500000 " << '\n';
+       std:: cin >> Mileage;
     }
-    cout << "Enter Price : " << '\n';
+    std::cout << "Enter Price : " << '\n';
 
     double Price;
-    cin >> Price;
+    std::cin >> Price;
     while (Price < 0)
     {
-        cout << "Invalid Price ! Please enter a valid Positive Price" << '\n';
-        cin >> Price;
+       std:: cout << "Invalid Price ! Please enter a valid Positive Price" << '\n';
+       std:: cin >> Price;
     }
 
-    cout << "Enter Maximum speed : " << '\n';
+   std:: cout << "Enter Maximum speed : " << '\n';
     int MaxSpeed;
-    cin >> MaxSpeed;
+   std:: cin >> MaxSpeed;
     while (MaxSpeed < 0)
     {
-        cout << "Invalid Price ! Please enter a valid Positive Maximum speed" << '\n';
-        cin >> MaxSpeed;
+      std::  cout << "Invalid Price ! Please enter a valid Positive Maximum speed" << '\n';
+       std:: cin >> MaxSpeed;
     }
-    cout << "Enter Transimission " << '\n';
-    string Transimision;
-    cin >> Transimision;
+    std::cout << "Enter Transimission " << '\n';
+    std::string Transimision;
+    std::cin >> Transimision;
 
     if (choice == 1)
     {
@@ -311,9 +312,9 @@ void Fleet_Management_System::Adding_Vehicle(int choice)
 
 template<class B>
 
-void Search_by_Brand_in_fleet(vector<B *> &Vehicle, string Brand)
+void Search_by_Brand_in_fleet(std::vector<B *> &Vehicle, std::string Brand)
 {
-    unordered_map<string, vector<B *> > search_by_brand; // for faster search O(1)
+    std::unordered_map<std::string,std:: vector<B *> > search_by_brand; // for faster search O(1)
     for (auto item: Vehicle)
     {
         search_by_brand[item->GetBrand()].push_back(item);
@@ -331,12 +332,12 @@ void Search_by_Brand_in_fleet(vector<B *> &Vehicle, string Brand)
         }
     } else
     {
-        cout << "This Vehicle does not exist in our fleet ! " << '\n';
+        std::cout << "This Vehicle does not exist in our fleet ! " << '\n';
     }
 }
 
 
-void Fleet_Management_System::Search_By_Brand(int choice, string Brand)
+void Fleet_Management_System::Search_By_Brand(int choice, std::string Brand)
 {
     if (choice == 1)
     {
@@ -349,9 +350,9 @@ void Fleet_Management_System::Search_By_Brand(int choice, string Brand)
 
 
 template<class T>
-void Search_By_Model_IN_Your_fleet(vector<T *> vechicle, string Model)
+void Search_By_Model_IN_Your_fleet(std::vector<T *> vechicle, std::string Model)
 {
-    unordered_map<string, vector<T *> > search_By_Model;
+    std::unordered_map<std::string, std::vector<T *> > search_By_Model;
     for (auto item: vechicle)
     {
         search_By_Model[item->GetModel()].push_back(item);
@@ -366,12 +367,12 @@ void Search_By_Model_IN_Your_fleet(vector<T *> vechicle, string Model)
         }
     } else
     {
-        cout << "This vehicle does not exist in our fleet " << '\n';
+        std::cout << "This vehicle does not exist in our fleet " << '\n';
     }
 }
 
 
-void Fleet_Management_System::Search_By_Model(int choice, string Model)
+void Fleet_Management_System::Search_By_Model(int choice, std::string Model)
 {
     if (choice == 1)
     {
@@ -384,9 +385,9 @@ void Fleet_Management_System::Search_By_Model(int choice, string Model)
 
 
 template<class T>
-void Search_By_Year_IN_Your_fleet(vector<T *> vechicle, int Year)
+void Search_By_Year_IN_Your_fleet(std::vector<T *> vechicle, int Year)
 {
-    unordered_map<int, vector<T *> > search_By_Model;
+    std::unordered_map<int,std:: vector<T *> > search_By_Model;
     for (auto item: vechicle)
     {
         search_By_Model[item->GetYear()].push_back(item);
@@ -401,7 +402,7 @@ void Search_By_Year_IN_Your_fleet(vector<T *> vechicle, int Year)
         }
     } else
     {
-        cout << "This vehicle does not exist in our fleet " << '\n';
+        std::cout << "This vehicle does not exist in our fleet " << '\n';
     }
 }
 
@@ -429,11 +430,11 @@ bool CompareMoto(Motorcycle *a, Motorcycle *b)
 }
 
 template<class T>
-void PrintSorted_OLD_TO_NEW(vector<T *> Vector_Copy, bool (*compareFunc)(T *, T *), string title)
+void PrintSorted_OLD_TO_NEW(std::vector<T *> Vector_Copy, bool (*compareFunc)(T *, T *), std::string title)
 //Using Function Pointer | ( *compareFunc) the name of pointer that will carry the function sent
 {
-    cout << "For : " << title << '\n';
-    cout << "--------------------" << '\n';
+   std:: cout << "For : " << title << '\n';
+    std::cout << "--------------------" << '\n';
 
     sort(Vector_Copy.begin(), Vector_Copy.end(), compareFunc);
     for (int i = 0; i < Vector_Copy.size(); i++)
@@ -446,12 +447,12 @@ void PrintSorted_OLD_TO_NEW(vector<T *> Vector_Copy, bool (*compareFunc)(T *, T 
 
 void Fleet_Management_System::sort_Old_to_new()
 {
-    vector<Car *> CARS = cars;
-    vector<Motorcycle *> MOTO = motorcycles;
+    std::vector<Car *> CARS = cars;
+    std::vector<Motorcycle *> MOTO = motorcycles;
     PrintSorted_OLD_TO_NEW(CARS, CompareCars, "Cars");
 
-    cout << "*****************************************" << '\n';
-    cout << "*****************************************" << '\n';
+    std::cout << "*****************************************" << '\n';
+    std::cout << "*****************************************" << '\n';
     PrintSorted_OLD_TO_NEW(MOTO, CompareMoto, "Motorcycles");
 }
 
@@ -467,10 +468,10 @@ bool CompareMoto2(Motorcycle *a, Motorcycle *b)
 
 template<class T>
 
-void printsorted_NEW_TO_OLD(vector<T *> Copy_Vector, bool (*CompareFunc)(T *, T *), string title)
+void printsorted_NEW_TO_OLD(std::vector<T *> Copy_Vector, bool (*CompareFunc)(T *, T *), std::string title)
 {
-    cout << "For : " << title << '\n';
-    cout << "------------------" << '\n';
+   std:: cout << "For : " << title << '\n';
+   std:: cout << "------------------" << '\n';
 
     sort(Copy_Vector.begin(), Copy_Vector.end(), CompareFunc);
     for (int i = 0; i < Copy_Vector.size(); i++)
@@ -483,18 +484,18 @@ void printsorted_NEW_TO_OLD(vector<T *> Copy_Vector, bool (*CompareFunc)(T *, T 
 
 void Fleet_Management_System::sort_new_to_Old()
 {
-    vector<Car *> CARS = cars;
-    vector<Motorcycle *> MOTO = motorcycles;
+   std:: vector<Car *> CARS = cars;
+    std::vector<Motorcycle *> MOTO = motorcycles;
 
     printsorted_NEW_TO_OLD(CARS, CompareCars2, "Cars");
-    cout << "**********************************************************" << '\n';
-    cout << "**********************************************************" << '\n';
-    cout << "**********************************************************" << '\n';
+    std::cout << "**********************************************************" << '\n';
+    std::cout << "**********************************************************" << '\n';
+    std::cout << "**********************************************************" << '\n';
     printsorted_NEW_TO_OLD(MOTO, CompareMoto2, "Motorcycles");
 }
 
 template<class T>
-void Remove_By_Binary_Search(vector<T *> &vehicle, int id)
+void Remove_By_Binary_Search(std::vector<T *> &vehicle, int id)
 {
     // ID's are arranged as we genetrated id's , so we can apply binary search O(log n) , instead of linear search O(n);
     // without & vehicle vector will be just a copy of cars or moto vector and any modification on it will not be noted in the orginial vectors
@@ -523,10 +524,10 @@ void Remove_By_Binary_Search(vector<T *> &vehicle, int id)
     {
         delete vehicle[index]; // in order to be deleted from heap memory and avoiding memory leak
         vehicle.erase(vehicle.begin() + index);
-        cout << "Removed successfully !" << '\n';
+       std:: cout << "Removed successfully !" << '\n';
     } else
     {
-        cout << "Does not exist in our fleet " << '\n';
+        std::cout << "Does not exist in our fleet " << '\n';
     }
 }
 
@@ -564,29 +565,28 @@ void Fleet_Management_System::Display_Menu()
         std::cout << "-----------------------------------" << '\n';
         std::cout << "Enter your choice : ";
 
-        while (!(cin >> Choice)) // testes the input , if it is not integer as(abc) enter the loop
+        while (!(std::cin >> Choice)) // testes the input , if it is not integer as(abc) enter the loop
         {
-            cout << "Invalid input ! Enter an integer ! " << '\n';
-            cin.clear(); //clears the error state of cin , allowing to accept input again
-            cin.ignore(10000, '\n'); // ignores wrong input up to 10000 char , when the user press enter stop ignoring
+            std::cout << "Invalid input ! Enter an integer ! " << '\n';
+            std::cin.clear(); //clears the error state of cin , allowing to accept input again
+            std::cin.ignore(10000, '\n'); // ignores wrong input up to 10000 char , when the user press enter stop ignoring
         }
 
         switch (Choice)
         {
             case 1:
             {
-                cout << "1. For adding cars " << '\n';
-                cout << "2. For adding motorcycles " << '\n';
+                std::cout << "1. For adding cars " << '\n';
+                std::cout << "2. For adding motorcycles " << '\n';
 
                 int choice;
 
 
-                while (!(cin >> choice) || (choice != 1 && choice != 2))  // to avoid string or char input
+                while (!(std::cin >> choice) || (choice != 1 && choice != 2)) // to avoid string or char input
                 {
-                    cout << "Enter a valid choice -> (1 or 2) !" << '\n';
-                    cin.clear();
-                    cin.ignore(10000, '\n');
-
+                    std::cout << "Enter a valid choice -> (1 or 2) !" << '\n';
+                    std::cin.clear();
+                    std::cin.ignore(10000, '\n');
                 }
 
                 if (choice == 1)
@@ -615,25 +615,22 @@ void Fleet_Management_System::Display_Menu()
             }
             case 5:
             {
-                cout << "1. Search For a car " << '\n';
-                cout << "2. Search for a Motorcycle " << '\n';
+                std::cout << "1. Search For a car " << '\n';
+                std::cout << "2. Search for a Motorcycle " << '\n';
                 int choice;
 
 
-
-                while (!(cin >> choice) || (choice != 1 && choice != 2))
+                while (!(std::cin >> choice) || (choice != 1 && choice != 2))
                 {
-                    cout << "Enter a valid choice -> (1 or 2) !" << '\n';
-                    cin.clear();
-                    cin.ignore(10000, '\n');
-
+                    std::cout << "Enter a valid choice -> (1 or 2) !" << '\n';
+                    std::cin.clear();
+                    std::cin.ignore(10000, '\n');
                 }
 
 
-
-                cout << "Enter the brand you want to search by : " << '\n';
-                string Brand;
-                cin >> Brand;
+                std::cout << "Enter the brand you want to search by : " << '\n';
+                std::string Brand;
+                std::cin >> Brand;
 
 
                 Search_By_Brand(choice, Brand);
@@ -643,42 +640,40 @@ void Fleet_Management_System::Display_Menu()
             }
             case 6:
             {
-                cout << "1. Search For a car " << '\n';
-                cout << "2. Search for a Motorcycle " << '\n';
+                std::cout << "1. Search For a car " << '\n';
+                std::cout << "2. Search for a Motorcycle " << '\n';
                 int choice;
 
 
-                while (!(cin >> choice) || (choice != 1 && choice != 2))
+                while (!(std::cin >> choice) || (choice != 1 && choice != 2))
                 {
-                    cout << "Enter a valid choice -> (1 or 2) !" << '\n';
-                    cin.clear();
-                    cin.ignore(10000, '\n');
-
+                   std:: cout << "Enter a valid choice -> (1 or 2) !" << '\n';
+                    std::cin.clear();
+                    std::cin.ignore(10000, '\n');
                 }
 
-                cout << "Enter the Model you want to search by : " << '\n';
-                string Model;
-                cin >> Model;
+                std::cout << "Enter the Model you want to search by : " << '\n';
+                std::string Model;
+                std::cin >> Model;
                 Search_By_Model(choice, Model);
 
                 break;
             }
             case 7:
             {
-                cout << "1. Search For a car " << '\n';
-                cout << "2. Search for a Motorcycle " << '\n';
+                std::cout << "1. Search For a car " << '\n';
+                std::cout << "2. Search for a Motorcycle " << '\n';
                 int choice;
 
-                while (!(cin >> choice) || (choice != 1 && choice != 2))
+                while (!(std::cin >> choice) || (choice != 1 && choice != 2))
                 {
-                    cout << "Enter a valid choice -> (1 or 2) !" << '\n';
-                    cin.clear();
-                    cin.ignore(10000, '\n');
-
+                    std::cout << "Enter a valid choice -> (1 or 2) !" << '\n';
+                    std::cin.clear();
+                    std::cin.ignore(10000, '\n');
                 }
-                cout << "Enter the Year you want to search by : " << '\n';
+                std::cout << "Enter the Year you want to search by : " << '\n';
                 int year;
-                cin >> year;
+                std::cin >> year;
 
                 Search_By_Year(choice, year);
 
@@ -697,24 +692,22 @@ void Fleet_Management_System::Display_Menu()
             }
             case 10:
             {
-                cout << "What type of Vehicles you want to remove ? " << '\n';
-                cout << "1.Car " << '\n';
-                cout << "2.Motorcycle " << '\n';
+                std::cout << "What type of Vehicles you want to remove ? " << '\n';
+                std::cout << "1.Car " << '\n';
+                std::cout << "2.Motorcycle " << '\n';
                 int choice;
 
 
-
-                while (!(cin >> choice) || (choice != 1 && choice != 2))
+                while (!(std::cin >> choice) || (choice != 1 && choice != 2))
                 {
-                    cout << "Enter a valid choice -> (1 or 2) !" << '\n';
-                    cin.clear();
-                    cin.ignore(10000, '\n');
-
+                    std::cout << "Enter a valid choice -> (1 or 2) !" << '\n';
+                    std::cin.clear();
+                    std::cin.ignore(10000, '\n');
                 }
 
-                cout << "Enter it's ID : " << '\n';
+               std:: cout << "Enter it's ID : " << '\n';
                 int id;
-                cin >> id;
+               std:: cin >> id;
 
                 Removing_Vehicle(choice, id);
 
@@ -727,14 +720,14 @@ void Fleet_Management_System::Display_Menu()
         }
 
 
-        cout << "Do you want to continue ? (Y/N) or (y/n)" << '\n';
+       std:: cout << "Do you want to continue ? (Y/N) or (y/n)" << '\n';
 
-        cin >> do_you_want_to_continue;
+        std::cin >> do_you_want_to_continue;
         while (do_you_want_to_continue != 'Y' && do_you_want_to_continue != 'y' && do_you_want_to_continue != 'N' &&
                do_you_want_to_continue != 'n')
         {
-            cout << "Invalid please Enter a valid letter ((Y/y)-> YES | (N/n)->No)" << '\n';
-            cin >> do_you_want_to_continue;
+            std::cout << "Invalid please Enter a valid letter ((Y/y)-> YES | (N/n)->No)" << '\n';
+            std::cin >> do_you_want_to_continue;
         }
 
         if (do_you_want_to_continue == 'Y' || do_you_want_to_continue == 'y')

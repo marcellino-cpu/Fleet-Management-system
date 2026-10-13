@@ -1,7 +1,6 @@
 #pragma once
 #include <iostream>
 #include <string>
-using namespace std ;
 
 class Engine
 {
@@ -9,19 +8,21 @@ private :
     double Capacity;
     int HoursePower;
     int cylinders;
-    string Fuel_Type;
-    string EngineType;
-
+    std::string Fuel_Type;
+    std::string EngineType;
 
 public :
-    Engine(double Capacity, int HoursePower, int Clyinders, string Fuel_Type, string EngineType);
+    Engine(double Capacity, int HoursePower, int Clyinders, std::string Fuel_Type, std::string EngineType);
 
     double GetCapacity();
+
     int GetPowerHourse();
+
     int GetCylinders();
-    string Get_Fuel_Type();
-    string Get_Engine_Type();
+
+    std::string Get_Fuel_Type();
+
+    std::string Get_Engine_Type();
 
     void ViewDetails();
-
 };

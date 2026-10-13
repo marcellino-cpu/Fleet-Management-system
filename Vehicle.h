@@ -3,7 +3,7 @@
 #include "Battery.h"
 #include <string>
 #include <iostream>
-using namespace std ;
+
 
 
 
@@ -11,28 +11,28 @@ using namespace std ;
 class Vehicle
 {
 private :
-    string Brand;
-    string Model;
+    std::string Brand;
+    std::string Model;
     int Year;
     long long Mileage;
     double Price;
-    string Transimission;
+    std::string Transimission;
     int MaxSpeed;
     static int Id_Generator;
     int id;
 
 public :
-    Vehicle(string Brand, string Model, int Year, long long Mileage, double Price, string Transimission, int MaxSpeed);  //Constructor
+    Vehicle(std::string Brand, std::string Model, int Year, long long Mileage, double Price, std::string Transimission, int MaxSpeed);  //Constructor
 
 
     //setters and getters for private members "Attributes"(Encapsulation)
     void SetPrice(double Price);
 
-    void SetTransimission(string Transimission);
+    void SetTransimission(std::string Transimission);
 
-    string GetBrand();
+    std::string GetBrand();
 
-    string GetModel();
+    std::string GetModel();
 
     int GetID();
 
@@ -42,7 +42,7 @@ public :
 
     double GetPrice();
 
-    string GetTransimission();
+    std::string GetTransimission();
 
     int GetMaxSpeed();
 
