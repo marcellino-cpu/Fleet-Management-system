@@ -1,94 +1,80 @@
 🚗 Fleet Management Console System
 =====================================
 
-A C++ console-based Fleet Management System developed as part of my learning journey as I am a ​Computer Science Student (Year 1).
+A C++ console-based Fleet Management System developed as part of my Computer Science learning journey. The project evolved from a basic procedural application into a modular, object-oriented system focused on clean code, reusability, and efficient data processing.
+---------------------------------------------------------------------------------------------------------------------------------------------------
 
------------------------------------------------------------------------------------
-This project demonstrates practical usage of:
-=============================================
+Features
+========
 
-1- Structures
+🟢 Vehicle Management: Add new vehicles and display all vehicles in the fleet.
+🟢 Brand Management: Display unique vehicle brands without duplication.
+🟢 Fleet Statistics: Count the number of vehicles for each brand.
+🟢Search Functionality: Search for vehicles by brand, model, or manufacturing year.
+🟢Sorting: Sort vehicles from newest to oldest and from oldest to newest.
+🟢Input Validation: Handle invalid user input to improve reliability.
+🟢Modular Architecture: Organize the code into separate header (".h") and source (".cpp") files.
+🟢Reusable Components: Use templates and shared functionality to reduce code duplication and improve maintainability.
 
-2- STL containers (vector, set, maps )
+Object-Oriented Programming (OOP)
+=================================
 
-3- Input validation
+Applied the four fundamental pillars of OOP:
 
-4- Basic data filtering and searching
+🔴 Encapsulation: Organizing data and related functionality within classes.
+🔴 Abstraction: Hiding implementation details behind clear interfaces.
+🔴 Inheritance: Reusing and extending functionality through class hierarchies.
+🔴 Polymorphism: Using function overriding to provide specialized behavior in derived classes.
 
------------------------------------------------------------------------------
+Additional Design Concepts
+===========================
 
-The system currently allows the user to:
-==========================================
+🔴 Association: Representing relationships between independent classes that interact with each other.
+🔴 Composition: Integrating "Engine" and "Battery" components into the "Car" and "Motorcycle" classes to represent vehicle composition.
+🔴 Templates: Writing reusable, type-independent code to reduce duplication and improve maintainability.
+🔴 Modular Design: Separating class declarations (".h") from implementations (".cpp").
 
-🟢Add a new vehicle
+Data Structures & Algorithms
+=============================
+◾STL Containers: "vector", "set", and "unordered_map".
+◾ Hash-Based Searching: Using "unordered_map" for average (O(1)) lookups by key, where applicable.
+◾Binary Search: Searching sorted data in (O(\log n)) time.
+◾Searching & Filtering: Finding vehicles by brand, model, and manufacturing year.
+◾ Sorting: Organizing vehicles chronologically.
+◾ Time Complexity Awareness: Choosing suitable data structures and algorithms, avoiding unnecessary nested loops, and using references to reduce unnecessary copying.
 
-🟢Display all vehicles in the fleet
-
-🟢Display unique brands in the fleet (using set as a STL in order to display each brand one time )
-
-🟢Display vehicle count per brand (The amount of each brand in the fleet )
-
-🟢Search vehicles by brand
-
-🟢Search vehicles by model
-
-🟢Search vehicles by year
-
---------------------------------------------------------------------------------------------------------
-
-🚀v2.0 Update 
+Tech Stack
 ==========
 
-​I have significantly upgraded my Fleet Management System, focusing on structural improvements, performance optimization, and the advanced application of C++ Standard Template Library (STL) containers.
+- Language: C++
+- Concepts: OOP, Templates, STL, Data Structures, Algorithms, and Input Validation.
+- Tools: Git, GitHub, and CLion.
 
--------------------------------------------------------------------------------------
-​✨ Key Improvements
-=======================
+Project Evolution
+=================
 
-​Modular Architecture:
-=======================
-Refactored the code by moving logic from main() into dedicated functions, significantly improving readability and maintainability.
+- _Version 1.0_
+  ===========
+-  Initial Implementation: A basic implementation with nested loops and all logic written inside "main()".
+- _Version 2.0
+  =============
+- _ — Functional Refactoring: Introduced reusable functions to improve code organization and reduce code duplication, while keeping the implementation in a single file.
+- _Version 3.0_
+  ==============
+-  — OOP Refactoring: Restructured the project into multiple ".h" and ".cpp" files, applying OOP principles, class relationships, templates, and polymorphism to improve modularity, reusability, and maintainability.
 
-​Performance Optimization:
-========================
-Eliminated all nested loops, transitioning to more efficient data processing techniques. 
-
-
-​Memory Efficiency:
-====================
-Implemented references (&) for passing vector and map objects to avoid unnecessary data copying and reduce memory overhead.
-
-​Advanced Data Structures:
-===========================
--​Integrated std::unordered_map to achieve O(1) average time complexity for data lookups.
-**replacing all std::map (O log n ) with std::unordered_map O(1) for better performance (as long as no need for arrangement).
--​Utilized std::priority_queue to implement dynamic sorting features.
-
-​New Functionality:
-===================
-🟢​Sort vehicles from newest to oldest.
-​🟢Sort vehicles from oldest to newest.
-
-​🛠 Tech Stack
-==============
-​Language: C++
-​STL Containers: vector, set, unordered_map, priority_queue.
-
-You could check the history to see how the code has changed over time.
-**********************************************************************
------------------------------------------------------------------------------------
-
-​🏗 Project Status & Roadmap
-=============================
-​The project is under active development. My next major goal is to refactor the entire system using Object-Oriented Programming (OOP) principles to move from a procedural design to a robust class-based architecture . In addition, the project can be extended to use more advanced concepts such as pointers and smart pointers.
-
-------------------------------------------------------------------------------------------
-
-Click here to watch the program Demo on Google drive :
-
-https://drive.google.com/file/d/1kv-THPVH5eGIAUaWLXsLh85TWHUJlX2H/view?usp=sharing
+Explore the "Git commit history" (https://github.com/marcellino-cpu/Fleet-Management-system/commits/main/) to see how the project evolved across these versions.
 
 
+Future Improvements
+=====================
 
+- Persistent data storage through file handling or database integration.
+- Expanded unit testing and error handling.
 
+Project Status
+===============
 
+Actively developing.
+
+This project is part of my ongoing journey in C++, data structures, algorithms, and software design.
