@@ -7,14 +7,14 @@ A C++ console-based Fleet Management System developed as part of my Computer Sci
 Features
 ========
 
-🟢**Vehicle Management**: Add new vehicles and display all vehicles in the fleet.
-🟢**Brand Management**: Display unique vehicle brands without duplication.
-🟢**Fleet Statistics**: Count the number of vehicles for each brand.
-🟢**Search Functionality**: Search for vehicles by brand, model, or manufacturing year.
-🟢**Sorting**: Sort vehicles from newest to oldest and from oldest to newest.
-🟢**Input Validation**: Handle invalid user input to improve reliability.
-🟢**Modular Architecture**: Organize the code into separate header (".h") and source (".cpp") files.
-🟢**Reusable Components**: Use templates and shared functionality to reduce code duplication and improve maintainability.
+🟢- **Vehicle Management**: Add new vehicles and display all vehicles in the fleet.
+🟢- **Brand Management**: Display unique vehicle brands without duplication.
+🟢- **Fleet Statistics**: Count the number of vehicles for each brand.
+🟢- **Search Functionality**: Search for vehicles by brand, model, or manufacturing year.
+🟢- **Sorting**: Sort vehicles from newest to oldest and from oldest to newest.
+🟢- **Input Validation**: Handle invalid user input to improve reliability.
+🟢- **Modular Architecture**: Organize the code into separate header (".h") and source (".cpp") files.
+🟢- **Reusable Components**: Use templates and shared functionality to reduce code duplication and improve maintainability.
 
 Object-Oriented Programming (OOP)
 =================================
@@ -22,27 +22,27 @@ Object-Oriented Programming (OOP)
 Applied the four fundamental pillars of OOP:
 ---------------------------------------------
 
--🔴 **Encapsulation**: Organizing data and related functionality within classes.
--🔴 **Abstraction**: Hiding implementation details behind clear interfaces.
--🔴 **Inheritance**: Reusing and extending functionality through class hierarchies.
--🔴 **Polymorphism**: Using function overriding to provide specialized behavior in derived classes.
+🔴-**Encapsulation**: Organizing data and related functionality within classes.
+🔴-**Abstraction**: Hiding implementation details behind clear interfaces.
+🔴-**Inheritance**: Reusing and extending functionality through class hierarchies.
+🔴-**Polymorphism**: Using function overriding to provide specialized behavior in derived classes.
 
 Additional Design Concepts
 ===========================
 
--🔴 **Association**: Representing relationships between independent classes that interact with each other.
--🔴 **Composition**: Integrating "Engine" and "Battery" components into the "Car" and "Motorcycle" classes to represent vehicle composition.
--🔴 **Templates**: Writing reusable, type-independent code to reduce duplication and improve maintainability.
--🔴 **Modular Design**: Separating class declarations (".h") from implementations (".cpp").
+🔴- **Association**: Representing relationships between independent classes that interact with each other.
+🔴- **Composition**: Integrating "Engine" and "Battery" components into the "Car" and "Motorcycle" classes to represent vehicle composition.
+🔴- **Templates**: Writing reusable, type-independent code to reduce duplication and improve maintainability.
+🔴- **Modular Design**: Separating class declarations (".h") from implementations (".cpp").
 
 Data Structures & Algorithms
 =============================
--◾**STL Containers**: "vector", "set", and "unordered_map".
--◾**Hash-Based Searching**: Using "unordered_map" for average (O(1)) lookups by key, where applicable.
--◾**Binary Search**: Searching sorted data in (O(\log n)) time.
--◾**Searching & Filtering**: Finding vehicles by brand, model, and manufacturing year.
--◾**Sorting**: Organizing vehicles chronologically.
--◾**Time Complexity Awareness**: Choosing suitable data structures and algorithms, avoiding unnecessary nested loops, and using references to reduce unnecessary copying.
+◾-**STL Containers**: "vector", "set", and "unordered_map".
+◾-**Hash-Based Searching**: Using "unordered_map" for average (O(1)) lookups by key, where applicable.
+◾-**Binary Search**: Searching sorted data in (O(\log n)) time.
+◾-**Searching & Filtering**: Finding vehicles by brand, model, and manufacturing year.
+◾-**Sorting**: Organizing vehicles chronologically.
+◾-**Time Complexity Awareness**: Choosing suitable data structures and algorithms, avoiding unnecessary nested loops, and using references to reduce unnecessary copying.
 
 Tech Stack
 ==========
