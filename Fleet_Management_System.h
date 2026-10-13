@@ -35,12 +35,7 @@ public :
     void Search_By_Model(int choice ,string Model);
 
     void Search_By_Year(int choice, int year);
-    //
-    // void Search_By_Brand_Moto(string Brand);
-    //
-    // void Search_By_Model_Moto(string Brand);
-    //
-    // void Search_By_year_Moto(int year);
+
 
 
     void sort_Old_to_new();
