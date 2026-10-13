@@ -62,10 +62,6 @@ Applied the four fundamental pillars of OOP:
 
 Explore the [Git commit history](https://github.com/marcellino-cpu/Fleet-Management-system/commits/main/) to see how the project evolved across these versions.
 
-## Demo
-
-[Watch the Fleet Management System Demo on Google Drive](https://drive.google.com/file/d/1kv-THPVH5eGIAUaWLXsLh85TWHUJlX2H/view?usp=sharing)
-
 ## Future Improvements
 
 - Persistent data storage through file handling or database integration.
